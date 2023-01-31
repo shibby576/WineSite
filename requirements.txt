@@ -1,3 +1,2 @@
-Flask
+flask
 scikit-learn
-pickle
