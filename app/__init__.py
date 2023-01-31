@@ -1,15 +1,15 @@
 from flask import Flask, request, render_template
 import pickle
 
-application = Flask(__name__)
+app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
-@application.route('/')
+@app.route('/')
 def home():
     return render_template('index.html')
 
 
-@application.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['POST'])
 def predict():
     """Grabs the input values and uses them to make prediction"""
     sulfate = float(request.form["sulfate"])
@@ -38,4 +38,4 @@ def predict():
     return render_template('index.html', prediction_text=f'Your wine has a predicted quality of {output_measure} and a rating of {modified_output}!')
 
 if __name__ == "__main__":
-    application.run()
+    app.run()
