@@ -2,4 +2,4 @@
 venv
 __pycache__
 winequality-red.csv
-.ipynb_checkpoints
+analysis_notebook-checkpoint.ipynb
