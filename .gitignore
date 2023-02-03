@@ -1,4 +1,4 @@
 # .gitignore
 venv
 __pycache__
-analysis
+winequality-red.csv
