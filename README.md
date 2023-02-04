@@ -6,6 +6,8 @@ Problem: As a novice wine enthusist, I thought it would be nice to have a tool t
 
 Solution: Something that could predict the quality of wine based on attributes i can see at the store might save me.
 
+Live site: https://winesite.herokuapp.com/
+
 Learning objectives:
 <br>-How to deploy a basic ML model in production 
 <br>-How to deploy a website
