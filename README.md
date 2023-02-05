@@ -27,10 +27,15 @@ Technology, products & methods used:
 Data analysis & Model: https://github.com/shibby576/WineSite/blob/main/analysis/analysis_notebook.ipynb
 Live final solution: https://winesite.herokuapp.com/
 
+## Steps
+### Train model and determine inputs
+
+### Design product
+
+### Write application
+
+### Deploy
+
 ## Lessons learned
-<br>### Model usability was impacted by data scaling
-#### test
-<br>-Model training and testing with Python (Scikit-learn)
-<br>-Python for application code (Flask)
-<br>-HTML/CSS for front end (Bootstrap)
-<br>-Heroku for app hosting
+### Model usability was impacted by data scaling
+To achieve more accurate predictions, I used MinMaxScaler to scale all training data to values between 0-1. A side effect of this is that to make a prediction, the model must take values from 0-1 as an input. This formatting is quite different than the standard X% Alcohol content that most people are used to, so i had to 
