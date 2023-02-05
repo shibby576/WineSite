@@ -1,9 +1,9 @@
 from flask import Flask, request, render_template
 import pickle
 
-#test
+
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb')) #model object
 
 @app.route('/')
 def home():
@@ -12,11 +12,11 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    """Grabs the input values and uses them to make prediction"""
+    #get values from form and input into model
     sulfate = float(request.form["sulfate"])
     alcohol = float(request.form["alcohol"])
-    prediction = model.predict([[sulfate, alcohol]])  # this returns a list e.g. [127.20488798], so pick first element [0]
-    output = round(prediction[0], 2) 
+    prediction = model.predict([[sulfate, alcohol]])  
+    output = round(prediction[0], 2) #prediction is a list, so select and round first value
     modified_output=''
     output_measure=0.0
     if output <.4 :

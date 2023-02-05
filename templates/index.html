@@ -13,13 +13,13 @@
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
         <div class="row align-items-center g-lg-5 py-5">
           <div class="col-lg-7 text-center text-lg-start">
-            <h1 class="display-4 fw-bold lh-1 mb-3">Predict the quality of your wine</h1>
-            <p class="col-lg-10 fs-4">Enter your wine's sulfate and alochol levels to predict it's quality score before tasting it. This is based off a linear regression model trained on over 1100 wines.</p>
+            <h1 class="display-4 fw-bold lh-1 mb-3">Predict wine quality</h1>
+            <p class="col-lg-10 fs-4">Enter the wine's sulfate and alcohol levels to predict it's quality score before tasting it.</p>
           </div>
           <div class="col-md-10 mx-auto col-lg-5">
             <form class="p-4 p-md-5 border rounded-3 bg-light" action="{{ url_for('predict')}}" method="post">
               <div class="form-floating mb-3">
-                <!-- <input type="text" class="form-control" id="floatingInput" name="sulfate" placeholder="Sulfate level"> -->
+                
                 <label for="floatingInput">Sulfate level</label>
                 <select class="form-control" id="floatingInput" name="sulfate">
                   <option value="0.0">Lowest sulfate</option>
@@ -30,7 +30,7 @@
                 </select>
               </div>
               <div class="form-floating mb-3">
-                <!-- <input type="text" name="alcohol" class="form-control" id="floatingPassword" placeholder="Alcohol level"> -->
+                
                 <label for="floatingPassword">Alcohol level</label>
                 <select class="form-control" id="floatingPassword" name="alcohol">
                   <option value="0.0">Lowest Alcohol ~8.4%</option>
@@ -57,6 +57,8 @@
           </div>
         </div>
       </div>
+      <a href="https://github.com/shibby576/WineSite" class="link-primary">What is the website all about?</a> 
+      <a href="https://github.com/shibby576/WineSite/blob/main/analysis/analysis_notebook.ipynb" class="link-primary">Model description</a>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
